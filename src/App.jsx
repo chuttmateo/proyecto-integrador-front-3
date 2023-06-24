@@ -3,10 +3,12 @@ import Home from "./Pages/Home/Home";
 import Dentists from "./Pages/Dentist/Dentist";
 import Contacto from "./Pages/Contacto/Contacto";
 import Favs from "./Pages/Favs/Favs";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <>
+    <NavBar />
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/dentist/:id" element={<Dentists />} />
