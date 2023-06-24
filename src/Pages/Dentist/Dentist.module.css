@@ -1,0 +1,15 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dentista{
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+    justify-self: center;
+    border: aqua solid 2px;
+    border-radius: 8px;
+}

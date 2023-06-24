@@ -1,0 +1,19 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 500px;
+}
+.input, .button{
+    padding: 5px;
+    border: solid aqua 1px; 
+    border-radius: 8px;
+}
+.button{
+    background-color: burlywood;
+    border-color: bisque;
+}
