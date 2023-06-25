@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './DentistaCard.module.css'
 function DentistaCard(props) {
   return (
@@ -9,7 +10,7 @@ function DentistaCard(props) {
       <h2>{props.objeto.name}</h2>
       <p>@{props.objeto.username.toLowerCase()}</p>
       {props.onClick && <button onClick={()=>props.onClick(props.objeto)}>Fav</button>}
-      {props.link}
+      {props.link && <Link className={styles.link} to={props.link}>Ver Info</Link>}
     </div>
   );
 }

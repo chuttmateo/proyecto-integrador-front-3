@@ -11,8 +11,9 @@ function Contacto() {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-
+  const [registro, setRegistro] = useState("");
   function handleSubmit(e) {
+    setRegistro("")
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     e.preventDefault();
     if (nombre.trim().length < 5) {
@@ -24,26 +25,28 @@ function Contacto() {
       return;
     }
     setError("");
-    alert("Guardado con exito");
+    setRegistro(`Gracias ${nombre}, te contactaremos cuando antes vía mail`)
   }
 
   return (
-    <div className={styles.contenedor}>
-      <form className={styles.formulario} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className={styles.input}
-          onChange={(e) => setNombre(e.target.value)}
-        />
-        <input
-          type="text"
-          className={styles.input}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button className={styles.button}>Go</button>
-        {error && <p>{error}</p>}
-      </form>
-    </div>
+      <div className={styles.contenedor}>
+        <h1>Ingresa tu info de contacto, te estaremos llamando a la brevedad</h1>
+        <form className={styles.formulario} onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className={styles.input}
+            onChange={(e) => setNombre(e.target.value)}
+          />
+          <input
+            type="text"
+            className={styles.input}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button className={styles.button}>Go</button>
+          {error && <p className={styles.error}>{error}</p>}
+          {registro && <h2>{registro}</h2>}
+        </form>
+      </div>
   );
 }
 

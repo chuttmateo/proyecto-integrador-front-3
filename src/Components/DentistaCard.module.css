@@ -3,7 +3,7 @@
     border-radius: 8px;
 }
 .dentista{
-    border: solid aqua 1px;
+    border: solid white 1px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -11,3 +11,15 @@
     align-items: center;
     padding: 20px;
 }
+.dentista:hover{
+    transform: scale(1.01);
+}
+.link{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.link:hover {
+    transform: scale(1.1);
+    border-radius: 5px;
+  }

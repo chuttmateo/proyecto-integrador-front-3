@@ -42,7 +42,7 @@ function Home() {
   }
 
   return (
-    <>
+    <div className={styles.contenedor}>
       <h1>Acá hay una lista de nuestros profesionales</h1>
       <h2>Estos son tus favoritos {favoritos.length}</h2>
       <div className={styles.dentistas}>
@@ -52,12 +52,12 @@ function Home() {
               key={dentista.id}
               objeto={dentista}
               onClick={handleFav}
-              link={<Link to={`/dentist/${dentista.id}`}>Ver Info</Link>}
+              link={`/dentist/${dentista.id}`}
             />
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 
