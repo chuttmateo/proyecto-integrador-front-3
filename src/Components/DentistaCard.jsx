@@ -10,7 +10,7 @@ function DentistaCard(props) {
       <h2>{props.objeto.name}</h2>
       <p>@{props.objeto.username.toLowerCase()}</p>
       {props.onClick && <button onClick={()=>props.onClick(props.objeto)}>Fav</button>}
-      {props.link && <Link className={styles.link} to={props.link}>Ver Info</Link>}
+      {props.link && <Link className={styles.link} to={props.link.path}>{props.link.info}</Link>}
     </div>
   );
 }

@@ -52,7 +52,7 @@ function Home() {
               key={dentista.id}
               objeto={dentista}
               onClick={handleFav}
-              link={`/dentist/${dentista.id}`}
+              link={{path:`/dentist/${dentista.id}`, info:"Ver Info"}}
             />
           );
         })}

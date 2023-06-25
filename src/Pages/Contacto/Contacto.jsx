@@ -30,8 +30,8 @@ function Contacto() {
 
   return (
       <div className={styles.contenedor}>
-        <h1>Ingresa tu info de contacto, te estaremos llamando a la brevedad</h1>
         <form className={styles.formulario} onSubmit={handleSubmit}>
+        <h1>Ingresa tu info de contacto, te estaremos llamando a la brevedad</h1>
           <input
             type="text"
             className={styles.input}
