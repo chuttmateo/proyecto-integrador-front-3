@@ -4,6 +4,8 @@
     align-items: center;
     color: white;
     min-height: 100px;
+    background-color: rgb(5,12,27);
+    border-top: solid 1px rgb(58,58,64)
 }
 .link{
     color: white;
@@ -11,6 +13,7 @@
     padding: 5px 10px;
 }
 .link:hover {
+    color: rgb(54,193,232);
     transform: scale(1.1);
     border-radius: 5px;
   }

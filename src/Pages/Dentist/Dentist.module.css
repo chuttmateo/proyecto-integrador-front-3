@@ -7,9 +7,18 @@
 
 .dentista{
     text-align: center;
-    margin-top: 10px;
+    margin: 20px 0px;
     padding: 15px;
     justify-self: center;
-    border: white solid 1px;
+    border: rgb(58,58,64) solid 1px;
     border-radius: 8px;
 }
+.link{
+    color: rgb(46,200,102);
+    text-decoration: none;
+    padding: 10px;
+}
+.link:hover {
+    transform: scale(1.1);
+    border-radius: 5px;
+  }

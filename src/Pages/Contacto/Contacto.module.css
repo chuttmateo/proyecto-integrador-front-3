@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: solid 1px rgb(58,58,64);
+    background-color: rgb(29,36,50);
 }
 .formulario{
+    max-width: 90vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -18,6 +23,7 @@
     transform: scale(1.01);
 }
 .error{
+    padding-top: 20px;
     color: red;
     font-size: 15px;
     text-align: center;

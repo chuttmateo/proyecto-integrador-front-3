@@ -36,11 +36,13 @@ function Contacto() {
             type="text"
             className={styles.input}
             onChange={(e) => setNombre(e.target.value)}
+            placeholder="Ingrese su nombre"
           />
           <input
             type="text"
             className={styles.input}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Ingrese su email"
           />
           <button className={styles.button}>Go</button>
           {error && <p className={styles.error}>{error}</p>}

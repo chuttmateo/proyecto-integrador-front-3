@@ -37,6 +37,9 @@ function Dentist() {
             <h2>{dentista.email}</h2>
             <h2>@{dentista.username}</h2>
             <h2>{dentista.website}</h2>
+            <Link className={styles.link} to="/home">
+              Volver
+            </Link>
           </div>
         </>
       )}

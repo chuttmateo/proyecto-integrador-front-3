@@ -19,7 +19,7 @@ function Favs() {
     <div className={styles.contenedor}>
       {favoritos.length > 0? (
         <>
-          <h1>Acá está la lista de tus odontologos favoritos</h1>
+          <h1>Acá está la lista de tus odontólogos favoritos</h1>
           <div className={styles.dentistas}>
             {favoritos.map((dentista) => {
               return (

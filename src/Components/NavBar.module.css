@@ -1,15 +1,17 @@
 .nav{
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
+    border-bottom: solid 1px rgb(58,58,64);
 }
 .link{
-    color: white;
+    color: rgb(173,192,199);
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px;
 }
 .link:hover {
-    transform: scale(1.1);
-    border-radius: 5px;
+    color: white;
+    transform: scale(1.01);
   }
