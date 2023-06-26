@@ -44,7 +44,7 @@ function Home() {
   return (
     <div className={styles.contenedor}>
       <h1>Acá hay una lista de nuestros profesionales</h1>
-      <h2>Estos son tus favoritos {favoritos.length}</h2>
+      {favoritos.length > 0 && <h2>Tienes {favoritos.length} {favoritos.length == 1 ? "odontologo" : " dontologos"} en la lista de favoritos</h2>}
       <div className={styles.dentistas}>
         {dentistas.map((dentista) => {
           return (
