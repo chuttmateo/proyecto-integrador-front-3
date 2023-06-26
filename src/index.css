@@ -5,8 +5,18 @@ body{
     background-color: rgb(14,20,30);
     color: white;
 }
-#root{
+/* #root{
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+} */
+.dark{
+    transition: all ease 0.3s;
+    background-color: rgb(14,20,30);
+    color: white;
+}
+.light{
+    transition: all ease 0.3s;
+    background-color: rgb(255, 245, 234);
+    color: black;
 }

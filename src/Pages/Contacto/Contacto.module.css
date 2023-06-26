@@ -28,3 +28,38 @@
     font-size: 15px;
     text-align: center;
 }
+
+
+
+
+
+:global(.light) .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: solid 1px rgb(58,58,64);
+    background-color: #FFBB98;
+}
+.formulario{
+    max-width: 90vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input, .button{
+    padding: 5px;
+    border: solid white 1px; 
+    border-radius: 8px;
+}
+.button:hover{
+    transform: scale(1.01);
+}
+.error{
+    padding-top: 20px;
+    color: red;
+    font-size: 15px;
+    text-align: center;
+}

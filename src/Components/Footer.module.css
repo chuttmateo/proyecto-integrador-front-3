@@ -1,5 +1,6 @@
 .div{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     color: white;
@@ -16,4 +17,28 @@
     color: rgb(54,193,232);
     transform: scale(1.1);
     border-radius: 5px;
-  }
+}
+
+
+
+:global(.light) .div{
+    transition: all ease 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #344648;
+    min-height: 100px;
+    background-color: #FFBB98;
+    border-top: solid 1px rgb(58,58,64)
+}
+.link{
+    color: #344648;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.link:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    border-radius: 5px;
+}

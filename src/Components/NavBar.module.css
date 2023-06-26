@@ -1,30 +1,68 @@
 .nav {
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   color: white;
   border-bottom: solid 1px rgb(58, 58, 64);
 }
+
+:global(.light) .nav {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  border-bottom: solid 1px rgb(0, 0, 0);
+}
+
 .link {
   color: rgb(173, 192, 199);
   text-decoration: none;
   padding: 5px;
 }
 
-.btn:hover, .link:hover {
+:global(.light) .link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 5px;
+}
+
+.btn:hover,
+.link:hover {
   color: white;
   transform: scale(1.01);
 }
 
-.active{
+:global(.light) .btn:hover,
+:global(.light) .link:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.01);
+}
+
+.active {
   color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+:global(.light) .active {
+  color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 5px;
 }
 
 .btn {
   color: rgb(173, 192, 199);
+  background: none;
+  border: 0;
+  font: inherit;
+  line-height: normal;
+}
+
+:global(.light) .btn {
+  color: rgb(0, 0, 0);
   background: none;
   border: 0;
   font: inherit;
