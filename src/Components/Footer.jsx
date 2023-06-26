@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className={styles.div}>
       <p>It works on my machine ¯\_(ツ)_/¯</p>
-      <a className={styles.link} href="http://github.com/chuttmateo">
+      <a className={styles.link} href="https://github.com/chuttmateo/proyecto-integrador-front-3">
         Github
       </a>
     </div>
