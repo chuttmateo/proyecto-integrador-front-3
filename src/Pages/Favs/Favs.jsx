@@ -15,6 +15,12 @@ function Favs() {
     setFavoritos(data)
   }
 
+  function eliminarFavorito(dentista) {
+    const filtrados = favoritos.filter((favorito)=> favorito.id != dentista.id) 
+    setFavoritos(filtrados)
+    localStorage.setItem("favoritos", JSON.stringify(filtrados))
+  }
+
   return (
     <div className={styles.contenedor}>
       {favoritos.length > 0? (
@@ -26,6 +32,7 @@ function Favs() {
                 <DentistaCard
                   key={dentista.id}
                   objeto={dentista}
+                  button={{onClick:()=>{eliminarFavorito(dentista)}, info:"Eliminar"}}
                   link={{path:`/home`, info:"Volver"}}
                 />
               );

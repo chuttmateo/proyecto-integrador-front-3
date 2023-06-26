@@ -51,7 +51,7 @@ function Home() {
             <DentistaCard
               key={dentista.id}
               objeto={dentista}
-              onClick={handleFav}
+              button={{onClick:handleFav, info:"Toggle Fav"}}
               link={{path:`/dentist/${dentista.id}`, info:"Ver Info"}}
             />
           );
