@@ -5,20 +5,23 @@ import Contacto from "./Pages/Contacto/Contacto";
 import Favs from "./Pages/Favs/Favs";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
+import ThemeContextProvider from "./Context/ThemeContextProvider";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/dentist/:id" element={<Dentists />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/favs" element={<Favs />} />
-        <Route path="*" element={<div>ESTA PAGINA NO EXITE</div>} />
-      </Routes>
-      <Footer />
+      <ThemeContextProvider>
+        <NavBar />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/dentist/:id" element={<Dentists />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/favs" element={<Favs />} />
+          <Route path="*" element={<div>ESTA PÁGINA NO EXITE</div>} />
+        </Routes>
+        <Footer />
+      </ThemeContextProvider>
     </>
   );
 }

@@ -12,10 +12,6 @@
     align-items: center;
     padding: 20px;
 }
-.dentista:hover{
-    background-color: rgb(33, 42, 59);
-    /* transform: scale(1.01); */
-}
 .link{
     color: rgb(46,200,102);
     text-decoration: none;

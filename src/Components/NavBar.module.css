@@ -1,17 +1,32 @@
-.nav{
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    border-bottom: solid 1px rgb(58,58,64);
+.nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  border-bottom: solid 1px rgb(58, 58, 64);
 }
-.link{
-    color: rgb(173,192,199);
-    text-decoration: none;
-    padding: 5px;
+.link {
+  color: rgb(173, 192, 199);
+  text-decoration: none;
+  padding: 5px;
 }
-.link:hover {
-    color: white;
-    transform: scale(1.01);
-  }
+
+.btn:hover, .link:hover {
+  color: white;
+  transform: scale(1.01);
+}
+
+.active{
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.btn {
+  color: rgb(173, 192, 199);
+  background: none;
+  border: 0;
+  font: inherit;
+  line-height: normal;
+}

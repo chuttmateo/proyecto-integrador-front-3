@@ -33,7 +33,7 @@ function Favs() {
           </div>
         </>
       ) : (
-        <h1>No tienes ningún odontólogo en tu lista de favoritos</h1>
+        <h1>No tienes a ningún odontólogo en tu lista de favoritos</h1>
       )}
     </div>
   );

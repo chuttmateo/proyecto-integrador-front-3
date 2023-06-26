@@ -5,8 +5,15 @@
     align-items: center;
     padding: 10px;
 }
-.dentistas{
+/* .dentistas{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+} */
+.dentistas{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }

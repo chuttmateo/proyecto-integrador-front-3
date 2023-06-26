@@ -1,14 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from './NavBar.module.css'
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./NavBar.module.css";
+import { ThemeContext } from "../Context/ThemeContextProvider";
 function NavBar() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <div className={styles.nav}>
-        <Link className={styles.link} to='/home'>Home</Link>
-        <Link className={styles.link} to='/favs'>Favoritos</Link>
-        <Link className={styles.link} to='/contacto'>Contactanos</Link>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? styles.link : isActive ? styles.active : styles.link
+        }
+        to="/home"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? styles.link : isActive ? styles.active : styles.link
+        }
+        to="/favs"
+      >
+        Favoritos
+      </NavLink>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? styles.link : isActive ? styles.active : styles.link
+        }
+        to="/contacto"
+      >
+        Contactanos
+      </NavLink>
+      <button className={styles.btn} onClick={toggleTheme}>
+        {theme} mode
+      </button>
     </div>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
