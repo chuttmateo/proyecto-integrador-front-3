@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./Dentist.module.css";
 
 function Dentist() {
@@ -21,6 +21,9 @@ function Dentist() {
     setDentista(dentista);
     setLoading(false);
   }
+
+  const navigate = useNavigate();
+
   return (
     <div className={styles.contenedor}>
       {loadig ? (
@@ -33,9 +36,7 @@ function Dentist() {
             <h2>Email: {dentista.email}</h2>
             <h2>Usuario IG: @{dentista && dentista.username.toLowerCase()}</h2>
             <h2>Página web: {dentista.website}</h2>
-            <Link className={styles.link} to="/home">
-              Volver
-            </Link>
+            <button className={styles.button} onClick={()=>{navigate(-1)}}>Volver</button>
           </div>
         </>
       )}

@@ -33,7 +33,7 @@ function Favs() {
                   key={dentista.id}
                   objeto={dentista}
                   button={{onClick:()=>{eliminarFavorito(dentista)}, info:"Eliminar de favoritos"}}
-                  link={{path:`/home`, info:"Volver"}}
+                  link={{ path: `/dentist/${dentista.id}`, info: "Ver Info" }}
                 />
               );
             })}

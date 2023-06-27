@@ -5,7 +5,7 @@ function DentistaCard(props) {
     <div className={styles.dentista}>
       <img
         className={styles.imagen}
-        src="/dentista.png"
+        src="https://i.pinimg.com/474x/e7/69/9c/e7699c46a2cd633bbb41f1606b597252.jpg"
         alt={props.username}
       />
       <h2 className={styles.h2}>{props.objeto.name}</h2>
