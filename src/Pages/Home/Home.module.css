@@ -18,3 +18,9 @@
     justify-content: center;
     gap: 20px;
 }
+.hidden{
+    visibility: hidden;
+}
+.title{
+    margin: 0;
+}

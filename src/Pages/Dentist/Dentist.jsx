@@ -21,8 +21,6 @@ function Dentist() {
     setDentista(dentista);
     setLoading(false);
   }
-
-  console.log(dentista);
   return (
     <div className={styles.contenedor}>
       {loadig ? (

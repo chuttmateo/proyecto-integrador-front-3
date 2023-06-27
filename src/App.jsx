@@ -6,21 +6,24 @@ import Favs from "./Pages/Favs/Favs";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import ThemeContextProvider from "./Context/ThemeContextProvider";
+import OdontologosContextProvider from "./Context/OdontologosContextProvider";
 
 function App() {
   return (
     <>
       <ThemeContextProvider>
-        <NavBar />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/dentist/:id" element={<Dentists />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/favs" element={<Favs />} />
-          <Route path="*" element={<div>ESTA PÁGINA NO EXITE</div>} />
-        </Routes>
-        <Footer />
+        <OdontologosContextProvider>
+          <NavBar />
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/dentist/:id" element={<Dentists />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/favs" element={<Favs />} />
+            <Route path="*" element={<div>ESTA PÁGINA NO EXITE</div>} />
+          </Routes>
+          <Footer />
+        </OdontologosContextProvider>
       </ThemeContextProvider>
     </>
   );

@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DentistaCard from "../../Components/DentistaCard";
 import styles from "./Home.module.css";
-import { Link } from "react-router-dom";
+import { OdontologosContext } from "../../Context/OdontologosContextProvider";
 
-//Donde tendrán que renderizar una card por cada dentista devuelto por la API.
 function Home() {
-  const [dentistas, setDentistas] = useState([]);
+  const odontologos = useContext(OdontologosContext);
   const [favoritos, setFavoritos] = useState([]);
 
   useEffect(() => {
-    fetchData();
     traerFavs();
   }, []);
 
   function traerFavs() {
     const localData = localStorage.getItem("favoritos");
     const data = localData ? JSON.parse(localData) : [];
-    setFavoritos(data)
-  }
-
-  async function fetchData() {
-    const data = await fetch("https://jsonplaceholder.typicode.com/users");
-    const dentistas = await data.json();
-    setDentistas(dentistas);
+    setFavoritos(data);
   }
 
   function handleFav(objeto) {
@@ -43,16 +35,25 @@ function Home() {
 
   return (
     <div className={styles.contenedor}>
-      <h1>Acá hay una lista de nuestros profesionales</h1>
-      {favoritos.length > 0 && <h2>Tienes {favoritos.length} {favoritos.length == 1 ? "odontologo" : " dontologos"} en la lista de favoritos</h2>}
+      <h1 className={styles.title}>Acá hay una lista de nuestros profesionales</h1>
+      <p className={favoritos.length == 0 ? styles.hidden : ""}>
+        Tienes {favoritos.length}{" "}
+        {favoritos.length == 1 ? "odontologo" : "odontologos"} en la lista de
+        favoritos.
+      </p>
       <div className={styles.dentistas}>
-        {dentistas.map((dentista) => {
+        {odontologos.map((dentista) => {
           return (
             <DentistaCard
               key={dentista.id}
               objeto={dentista}
-              button={{onClick:handleFav, info:"Toggle Fav"}}
-              link={{path:`/dentist/${dentista.id}`, info:"Ver Info"}}
+              button={{
+                onClick: handleFav,
+                info: favoritos.find((d) => d.id == dentista.id)
+                  ? "Quitar favorito"
+                  : "Añadir favorito",
+              }}
+              link={{ path: `/dentist/${dentista.id}`, info: "Ver Info" }}
             />
           );
         })}

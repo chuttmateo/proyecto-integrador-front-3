@@ -25,7 +25,7 @@ function Contacto() {
       return;
     }
     setError("");
-    setRegistro(`Gracias ${nombre}, te contactaremos cuando antes vía mail`)
+    setRegistro(`Gracias ${nombre}, te contactaremos cuanto antes vía mail`)
   }
 
   return (

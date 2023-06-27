@@ -44,6 +44,7 @@
 
 .active {
   color: white;
+  color: rgb(46, 200, 102);
   text-decoration: none;
   padding: 5px;
 }

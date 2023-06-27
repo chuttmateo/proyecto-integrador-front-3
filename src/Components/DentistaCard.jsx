@@ -5,7 +5,7 @@ function DentistaCard(props) {
     <div className={styles.dentista}>
       <img
         className={styles.imagen}
-        src="https://w7.pngwing.com/pngs/649/22/png-transparent-dentistry-toothbrush-cute-dental-s-hand-boy-cartoon-thumbnail.png"
+        src="/dentista.png"
         alt={props.username}
       />
       <h2 className={styles.h2}>{props.objeto.name}</h2>

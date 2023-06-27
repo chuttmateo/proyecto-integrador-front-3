@@ -32,12 +32,12 @@
     background-color: #FFBB98;
     border-top: solid 1px rgb(58,58,64)
 }
-.link{
+:global(.light) .link{
     color: #344648;
     text-decoration: none;
     padding: 5px 10px;
 }
-.link:hover {
+:global(.light) .link:hover {
     color: rgb(0, 0, 0);
     transform: scale(1.1);
     border-radius: 5px;
