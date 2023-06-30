@@ -1,25 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import DentistaCard from "../../Components/DentistaCard";
 import styles from "./Favs.module.css";
+import { FavoritosContext } from "../../Context/FavoritosContextProvider";
 
 function Favs() {
-  const [favoritos, setFavoritos] = useState([]);
 
-  useEffect(() => {
-    traerFavs();
-  }, []);
-
-  function traerFavs() {
-    const localData = localStorage.getItem("favoritos");
-    const data = localData ? JSON.parse(localData) : [];
-    setFavoritos(data)
-  }
-
-  function eliminarFavorito(dentista) {
-    const filtrados = favoritos.filter((favorito)=> favorito.id != dentista.id) 
-    setFavoritos(filtrados)
-    localStorage.setItem("favoritos", JSON.stringify(filtrados))
-  }
+  const {favoritos, handleFav} = useContext(FavoritosContext);
 
   return (
     <div className={styles.contenedor}>
@@ -32,7 +18,7 @@ function Favs() {
                 <DentistaCard
                   key={dentista.id}
                   objeto={dentista}
-                  button={{onClick:()=>{eliminarFavorito(dentista)}, info:"Eliminar de favoritos"}}
+                  button={{onClick:()=>{handleFav(dentista)}, info:"Eliminar de favoritos"}}
                   link={{ path: `/dentist/${dentista.id}`, info: "Ver Info" }}
                 />
               );
