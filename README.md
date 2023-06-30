@@ -4,7 +4,7 @@
 
 Este proyecto consiste en una aplicación web desarrollada en React.js para mostrar información sobre odontólogos. 
 El proyecto utiliza React Router para el enrutamiento de las páginas 
-y React Context para el manejo del tema y la lista de odontólogos favoritos.
+y React Context para el manejo del tema y la lista de odontólogos.
 
 ## Link a gh pages
 
@@ -30,7 +30,8 @@ El proyecto utiliza las siguientes dependencias:
 
 ## Instalación y ejecución
 
-1. Clona este repositorio en tu máquina local.
+1. Tener instalado node.
+2. Clona este repositorio en tu máquina local.
 2. Abre una terminal y navega hasta el directorio del proyecto.
 3. Ejecuta el comando `npm install` para instalar las dependencias.
 4. Ejecuta el comando `npm run dev` para iniciar la aplicación.
