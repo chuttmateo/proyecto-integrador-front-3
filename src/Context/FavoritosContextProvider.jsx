@@ -18,7 +18,7 @@ function FavoritosContextProvider({ children }) {
   }
 
   function handleFav(odontologo) {
-    const actualizado = favoritos.filter((fav) => fav.id != odontologo.id);
+    const actualizado = favoritos.filter((fav) => fav.id !== odontologo.id);
     if (actualizado.length < favoritos.length) {
       setFavoritos(actualizado);
       localStorage.setItem("favoritos", JSON.stringify(actualizado));

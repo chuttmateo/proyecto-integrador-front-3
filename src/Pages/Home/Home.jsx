@@ -15,10 +15,10 @@ function Home() {
       <h1 className={styles.title}>
         Acá hay una lista de nuestros profesionales
       </h1>
-      <p className={favoritos.length == 0 ? styles.hidden : ""}>
+      <p className={favoritos.length === 0 ? styles.hidden : ""}>
         <Link to={"/favs"} className={styles.link}>
           Tienes {favoritos.length}{" "}
-          {favoritos.length == 1 ? "odontologo" : "odontologos"} en la lista de
+          {favoritos.length === 1 ? "odontologo" : "odontologos"} en la lista de
           favoritos.
         </Link>
       </p>
@@ -30,7 +30,7 @@ function Home() {
               objeto={dentista}
               button={{
                 onClick: handleFav,
-                info: favoritos.find((d) => d.id == dentista.id)
+                info: favoritos.some((d) => d.id === dentista.id)
                   ? "Quitar favorito"
                   : "Añadir favorito",
               }}

@@ -8,7 +8,7 @@ function ThemeContextProvider({ children }) {
 
   function getLocalstorage() {
     return localStorage.getItem("theme")
-      ? JSON.parse(localStorage.getItem("theme"))
+      ? localStorage.getItem("theme")
       : "dark";
   }
 
@@ -22,7 +22,7 @@ function ThemeContextProvider({ children }) {
       tema = "dark";
       setTheme("dark");
     }
-    localStorage.setItem("theme", JSON.stringify(tema));
+    localStorage.setItem("theme", tema);
   }
 
   return (

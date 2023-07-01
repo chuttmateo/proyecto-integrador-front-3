@@ -4,12 +4,11 @@ import styles from "./Favs.module.css";
 import { FavoritosContext } from "../../Context/FavoritosContextProvider";
 
 function Favs() {
-
-  const {favoritos, handleFav} = useContext(FavoritosContext);
+  const { favoritos, handleFav } = useContext(FavoritosContext);
 
   return (
     <div className={styles.contenedor}>
-      {favoritos.length > 0? (
+      {favoritos.length > 0 ? (
         <>
           <h1>Acá está la lista de tus odontólogos favoritos</h1>
           <div className={styles.dentistas}>
@@ -18,7 +17,12 @@ function Favs() {
                 <DentistaCard
                   key={dentista.id}
                   objeto={dentista}
-                  button={{onClick:()=>{handleFav(dentista)}, info:"Eliminar de favoritos"}}
+                  button={{
+                    onClick: () => {
+                      handleFav(dentista);
+                    },
+                    info: "Eliminar de favoritos",
+                  }}
                   link={{ path: `/dentist/${dentista.id}`, info: "Ver Info" }}
                 />
               );
